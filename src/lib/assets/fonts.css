@@ -2,5 +2,5 @@
     font-family: 'Lora';
     font-style: normal;
     font-weight: 500;
-    src: local(''), url('retro_computer_personal_use.ttf') format('truetype'),
+    src: local(''), url('/retro_computer_personal_use.ttf') format('truetype'),
 }
