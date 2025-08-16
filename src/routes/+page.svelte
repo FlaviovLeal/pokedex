@@ -3,8 +3,8 @@
         {
             name: 'Pikachu',
             pinned: true,
-            icon: 'src/images/pikachu.png',
-            gif: 'src/images/pikachu.gif',
+            icon: 'images/pikachu.png',
+            gif: 'images/pikachu.gif',
             iniciative: 5,
             iniciative_c: 7,
             movement: 2,
@@ -17,8 +17,8 @@
         {
             name: 'Charizard',
             pinned: false,
-            icon: 'src/images/charizard.png',
-            gif: 'src/images/charizard.gif',
+            icon: 'images/charizard.png',
+            gif: 'images/charizard.gif',
             iniciative: 3,
             iniciative_c: 7,
             movement: 6,
@@ -53,7 +53,7 @@
         height: 100px;
     }
     .front-btn {
-        background-image: url('src/images/UI/left_button.png');
+        background-image: url('/images/UI/left_button.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 57.2px 91.4px;
@@ -69,7 +69,7 @@
         justify-content: center;
     }
     .back-btn {
-        background-image: url('src/images/UI/right_button.png');
+        background-image: url('/images/UI/right_button.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 57.2px 91.4px;
@@ -103,13 +103,13 @@
     }
 </style>
 <div class="Header">
-    <img class='header-left' src="src/images/UI/Header_left.png" alt="header"/><img class='header-right' src="src/images/UI/Header_right.png" alt="header"/>
+    <img class='header-left' src="images/UI/Header_left.png" alt="header"/><img class='header-right' src="images/UI/Header_right.png" alt="header"/>
 </div>
 <div style="position: relative; z-index: 1;">
     <div class="flex-container">
         <button class="front-btn" on:click={decreaseIndex} aria-label="front"></button>
         <div style="float: left; position: relative;">
-            <img src='src/images/UI/screen.png' alt='Container' style="height: 230px;"/>
+            <img src='images/UI/screen.png' alt='Container' style="height: 230px;"/>
             <img 
                 src={data[index].gif} alt={data[index].name} 
                 style="position: absolute; top: 50px; right: 50px; height: 89px; "
