@@ -56,9 +56,9 @@
         background-image: url('src/images/UI/left_button.png');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 32px 32px;
-        width: 32px;
-        height: 32px;
+        background-size: 57.2px 91.4px;
+        width: 57.2px;
+        height: 91.4px;
         padding: 0;
         border: none;
         outline: none;
@@ -72,9 +72,9 @@
         background-image: url('src/images/UI/right_button.png');
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 32px 32px;
-        width: 32px;
-        height: 32px;
+        background-size: 57.2px 91.4px;
+        width: 57.2px;
+        height: 91.4px;
         padding: 0;
         border: none;
         outline: none;
@@ -108,7 +108,13 @@
 <div style="position: relative; z-index: 1;">
     <div class="flex-container">
         <button class="front-btn" on:click={decreaseIndex} aria-label="front"></button>
-        <div><img src={data[index].gif} alt={data[index].name} class="icon" /></div>
+        <div style="float: left; position: relative;">
+            <img src='src/images/UI/screen.png' alt='Container' style="height: 230px;"/>
+            <img 
+                src={data[index].gif} alt={data[index].name} 
+                style="position: absolute; top: 50px; right: 50px; height: 89px; "
+            />
+        </div>
         <button class="back-btn" on:click={increaseIndex} aria-label="back"></button>
     </div>
     <div class="info" >
