@@ -1,34 +1,6 @@
 <script>
-    let data = [
-        {
-            name: 'Pikachu',
-            pinned: true,
-            icon: 'images/pikachu.png',
-            gif: 'images/pikachu.gif',
-            iniciative: 5,
-            iniciative_c: 7,
-            movement: 2,
-            movement_c: 4,
-            attack: 6,
-            attack_c: 8,
-            defense: 5,
-            defense_c: 7
-        },
-        {
-            name: 'Charizard',
-            pinned: false,
-            icon: 'images/charizard.png',
-            gif: 'images/charizard.gif',
-            iniciative: 3,
-            iniciative_c: 7,
-            movement: 6,
-            movement_c: 4,
-            attack: 8,
-            attack_c: 8,
-            defense: 2,
-            defense_c: 7
-        }
-    ];
+    import data from '$lib/data.js';
+    
     let page_pin = true
     let index =1
 
@@ -103,7 +75,7 @@
     }
 </style>
 <div class="Header">
-    <img class='header-left' src="images/UI/Header_left.png" alt="header"/><img class='header-right' src="images/UI/Header_right.png" alt="header"/>
+    <img class='header-left' src="/images/UI/Header_left.png" alt="header"/><img class='header-right' src="/images/UI/Header_right.png" alt="header"/>
 </div>
 <div style="position: relative; z-index: 1;">
     <div class="flex-container">
@@ -131,9 +103,3 @@
         </div>
     </div>
 </div>    
-<div class="flex-container">
-    {#each data as item, i (index)}
-        <img src={item.icon} alt={item.name} style="width: 50px; height: 50px;"/>
-        <p>{item.name}</p>
-    {/each}
-</div>
