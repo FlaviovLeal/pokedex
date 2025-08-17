@@ -90,7 +90,7 @@
             src='images/UI/screen.png' alt='Container' 
             style="position: absolute; z-index: 5; top: 0px; right: 0px; height: 230px;"/>
             <img 
-            src={data[index].gif} alt={data[index].name} 
+            src={data[index].gifs} alt={data[index].name} 
             style="height: 89px; z-index: 10; position: relative; left: 5px;"
             />
         </div>
