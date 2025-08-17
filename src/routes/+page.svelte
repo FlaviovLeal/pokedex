@@ -90,7 +90,7 @@
             src='images/UI/screen.png' alt='Container' 
             style="position: absolute; z-index: 5; top: 0px; right: 0px; height: 230px;"/>
             <img 
-            src={data[index].gif} alt={data[index].name} 
+            src={data[index].gifs} alt={data[index].name} 
             style="height: 89px; z-index: 10; position: relative; left: 5px;"
             />
         </div>
@@ -100,12 +100,12 @@
         <h2 style="margin: 16px;">{data[index].name}</h2>
         <div style="display: flex; flex-direction: row;">
             <div style="display: flex; flex-direction: column; margin:16px">
-                <p>Iniciativa: {data[index].iniciative}</p>
-                <p>Movimento: {data[index].movement}</p>
+                <p>Init: {data[index].iniciative}</p>
+                <p>Mov: {data[index].movement}</p>
             </div>
             <div style="display: flex; flex-direction: column; margin:16px">
-                <p>Ataque: {data[index].attack}</p>
-                <p>Defesa: {data[index].defense}</p>
+                <p>Atk: {data[index].attack}</p>
+                <p>Def: {data[index].defense}</p>
             </div>
         </div>
     </div>
