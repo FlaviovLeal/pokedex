@@ -250,7 +250,7 @@ let data = [
         "defense": "4"
     },
     {
-        "name": "Rotom\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n - ****",
+        "name": "Rotom - ****",
         "pinned": false,
         "icon": "images/mini_icons/s15328.png",
         "gif": "images/sprites/s15328.png",

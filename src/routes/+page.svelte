@@ -1,6 +1,6 @@
 <script>
     import data from '$lib/data.js';
-    
+
     let page_pin = true
     let index =1
 
@@ -39,6 +39,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 1;
     }
     .back-btn {
         background-image: url('/images/UI/right_button.png');
@@ -48,6 +49,7 @@
         width: 57.2px;
         height: 91.4px;
         padding: 0;
+        z-index: 1;
         border: none;
         outline: none;
         background-color: transparent;
@@ -77,14 +79,19 @@
 <div class="Header">
     <img class='header-left' src="/images/UI/Header_left.png" alt="header"/><img class='header-right' src="/images/UI/Header_right.png" alt="header"/>
 </div>
-<div style="position: relative; z-index: 1;">
+<div style="position: relative;">
     <div class="flex-container">
         <button class="front-btn" on:click={decreaseIndex} aria-label="front"></button>
-        <div style="float: left; position: relative;">
-            <img src='images/UI/screen.png' alt='Container' style="height: 230px;"/>
+        <div style="float: left; position: relative; height: 230px; width: 208px;
+            display: flex;
+            justify-content: center;
+            align-items: center;">
             <img 
-                src={data[index].gif} alt={data[index].name} 
-                style="position: absolute; top: 50px; right: 50px; height: 89px; "
+            src='images/UI/screen.png' alt='Container' 
+            style="position: absolute; z-index: 5; top: 0px; right: 0px; height: 230px;"/>
+            <img 
+            src={data[index].gif} alt={data[index].name} 
+            style="height: 89px; z-index: 10; position: relative; left: 5px;"
             />
         </div>
         <button class="back-btn" on:click={increaseIndex} aria-label="back"></button>
