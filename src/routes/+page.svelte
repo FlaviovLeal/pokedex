@@ -131,3 +131,9 @@
         </div>
     </div>
 </div>    
+<div class="flex-container">
+    {#each data as item, i (index)}
+        <img src={item.icon} alt={item.name} style="width: 50px; height: 50px;"/>
+        <p>{item.name}</p>
+    {/each}
+</div>
