@@ -1,8 +1,13 @@
 <script>
     import data from '$lib/data.js';
+    import { Tween } from 'svelte/motion';
+    import BotaoAzul from './botao_azul.svelte';
 
     let page_pin = true
-    let index =1
+    let index = $state(0);
+    function set_index(new_index) {
+        index = new_index;
+    }
 
     function increaseIndex() {
         index = (index + 1) % data.length;
@@ -81,7 +86,7 @@
 </div>
 <div style="position: relative;">
     <div class="flex-container">
-        <button class="front-btn" on:click={decreaseIndex} aria-label="front"></button>
+        <button class="front-btn" onclick={decreaseIndex} aria-label="front"></button>
         <div style="float: left; position: relative; height: 230px; width: 208px;
             display: flex;
             justify-content: center;
@@ -94,7 +99,7 @@
             style="height: 89px; z-index: 10; position: relative; left: 5px;"
             />
         </div>
-        <button class="back-btn" on:click={increaseIndex} aria-label="back"></button>
+        <button class="back-btn" onclick={increaseIndex} aria-label="back"></button>
     </div>
     <div class="info" >
         <h2 style="margin: 16px;">{data[index].name}</h2>
@@ -110,3 +115,18 @@
         </div>
     </div>
 </div>    
+
+<div 
+    style="display: flex; flex-direction: row; justify-content: center; 
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height-max: 30%; margin-bottom: 16px;"
+    
+    >
+<BotaoAzul variable={() => set_index(7)} name={'   Tinkaton'}/>
+<BotaoAzul variable={() => set_index(13)} name={'   Galvantula'}/>
+<BotaoAzul variable={() => set_index(30)} name={'   Heracross'}/>
+<BotaoAzul variable={() => set_index(31)} name={'   Spoink'}/>
+
+</div>
